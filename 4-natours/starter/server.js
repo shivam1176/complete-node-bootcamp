@@ -14,13 +14,25 @@ mongoose.connect(DB,{
     useFindAndModify:false
 }).then(con=>
     {
-      console.log(con.connection);
+    //   console.log(con.connection);
       console.log('DB connection successful!');  
     }
 )
 
-//  console.log(process.env);
 
+//  console.log(process.env);
+// const testTour = new Tour({
+//         name:'the park camper',
+//         rating:4.7,
+//         price:497
+//     });
+//     testTour
+//     .save()
+//     .then(doc =>{
+//         console.log(doc)
+//     }).catch(err=>{
+//         console.log('ERROR',err);
+//     });
 const port =process.env.PORT ||3001;
 app.listen(port,()=>{
     console.log(`app is running on ${port}...`);
