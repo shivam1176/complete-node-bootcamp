@@ -16,8 +16,8 @@ exports.checkBody=(req,res,next)=>{
 
 exports.getAllTours =async(req,res)=>{
 try{
-    cost queryObj = { ...req.query};
-    const excludingFields =['page','sort'];
+    const queryObj = { ...req.query};
+    const excludingFields =['page','sort','limit','fields'];
 
     
 
